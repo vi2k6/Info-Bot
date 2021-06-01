@@ -37,16 +37,6 @@ ABOUT_TEXT = """
 **Server :** [Heroku](https://heroku.com)
 """
 
-INFO_TEXT = """
-**First Name :** {update.from_user.first_name}
-**Second Name :** {update.from_user.second_name}
-**Username :** {update.from_user.username}
-**ID :** {update.from_user.id}
-"""
-
-ID_TEXT = """
-**Your Telegram ID :** {update.from_user.id}
-"""
 Bot = Client(
         "Maintenance Bot",
         bot_token = os.environ["BOT_TOKEN"],
@@ -114,7 +104,12 @@ async def about(bot, update):
 
 @Bot.on_message(filters.private & filters.command("info"))
 async def info(bot, update):
-    text = INFO_TEXT
+    text = f"""
+**First Name :** {update.from_user.first_name}
+**Second Name :** {update.from_user.second_name}
+**Username :** {update.from_user.username}
+**ID :** {update.from_user.id}
+"""
     reply_markup = BOT_BUTTONS
     await update.reply_text(        
         text=text,
@@ -124,10 +119,14 @@ async def info(bot, update):
 
 @Bot.on_message(filters.private & filters.command("id"))
 async def id(bot, update):
-    text = ID_TEXT
+    text = f"""
+**Your Telegram ID :** {update.from_user.id}
+"""
     reply_markup = BOT_BUTTONS
     await update.reply_text(        
         text=text,
         disable_web_page_preview=True,
         reply_markup=reply_markup
     )
+
+Bot.run()
