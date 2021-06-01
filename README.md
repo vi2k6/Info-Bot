@@ -33,3 +33,19 @@ API_HASH - Get from My.Telegram.Org
 BOT_TOKEN - From @BotFather
 ```
 **3.** Deploy It
+
+### Vars
+
+`APP_ID` : Goto [my.telegram.org](https://my.telegram.org) to obtain this.
+
+`API_HASH` : Goto [my.telegram.org](https://my.telegram.org) to obtain this.
+
+`BOT_TOKEN` : Get the bot token from [@BotFather](https://telegram.dog/BotFather)
+
+### License
+
+Distributed under MIT License. See `LICENSE` for more information.
+
+### About US
+
+This is developed by [Vivek](https://gitHub.com/Vivek-TP) And [Fayas](https://github.com/FayasNoushad) As Helper.
