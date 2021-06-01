@@ -28,6 +28,17 @@ ABOUT_TEXT = """
 **Server :** [Heroku](https://heroku.com)
 """
 
+INFO_TEXT = """
+**First Name :** {update.from_user.first_name}
+**Second Name :** {update.from_user.second_name}
+**Username :** {update.from_user.username}
+**ID :** {update.from_user.id}
+"""
+
+ID_TEXT = """
+**Your Telegram ID :** {update.from_user.id}
+"""
+
 START_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton(text="Channel", url=f"https://telegram.me/{updatesc}"),
@@ -51,7 +62,7 @@ ABOUT_BUTTONS = InlineKeyboardMarkup(
                 
 @Bot.on_message(filters.private & filters.command("start"))
 async def start(bot, update):
-    text = START_TEXT.format(update.from_user.mention)
+    text = START_TEXT.format(update.from_user.mention) 
     reply_markup = START_BUTTONS
     await update.reply_text(
         text=text,
@@ -70,11 +81,31 @@ async def help(bot, update):
     )
 
 
-@Bot.on_message(filters.private & filters.command("ABOUT"))
+@Bot.on_message(filters.private & filters.command("about"))
 async def about(bot, update):
     text = ABOUT_TEXT
     reply_markup = ABOUT_BUTTONS
     await update.reply_text(
+        text=text,
+        disable_web_page_preview=True,
+        reply_markup=reply_markup
+    )
+
+@Bot.on_message(filters.private & filters.command("info"))
+async def info(bot, update):
+    text = INFO_TEXT
+    reply_markup = BOT_BUTTONS
+    await update.reply_text(        
+        text=text,
+        disable_web_page_preview=True,
+        reply_markup=reply_markup
+    )
+
+@Bot.on_message(filters.private & filters.command("id"))
+async def id(bot, update):
+    text = ID_TEXT
+    reply_markup = BOT_BUTTONS
+    await update.reply_text(        
         text=text,
         disable_web_page_preview=True,
         reply_markup=reply_markup
