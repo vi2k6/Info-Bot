@@ -1,4 +1,13 @@
 import os
+from pyrogram import Client, filters
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+
+Bot = Client(
+        "Maintenance Bot",
+        bot_token = os.environ["BOT_TOKEN"],
+        api_id = int(os.environ["API_ID"]),
+        api_hash = os.environ["API_HASH"]
+)
 
 START_TEXT = """
 <b>Hello {}
@@ -14,7 +23,7 @@ HELP_TEXT = """
 
 ⭕️ Reply /info to a Message to take Message Details
 
-⭕️ Use /me Command to take your Details
+⭕️ Use /info Command to take your Details
 
 ⭕️ Use /id in Group or Channel to get Unique Telegram ID
 """
@@ -38,6 +47,15 @@ INFO_TEXT = """
 ID_TEXT = """
 **Your Telegram ID :** {update.from_user.id}
 """
+Bot = Client(
+        "Maintenance Bot",
+        bot_token = os.environ["BOT_TOKEN"],
+        api_id = int(os.environ["API_ID"]),
+        api_hash = os.environ["API_HASH"]
+)
+
+
+
 
 START_BUTTONS = InlineKeyboardMarkup(
         [[
