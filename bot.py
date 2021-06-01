@@ -54,26 +54,29 @@ Bot = Client(
         api_hash = os.environ["API_HASH"]
 )
 
+supportc = os.environ["SUPPORT_CHAT"]
 
+BOT_BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton(text="Support", url=f"https://telegram.me/{supportc}")
+        ]]
+    )
 
 
 START_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton(text="Channel", url=f"https://telegram.me/{updatesc}"),
         InlineKeyboardButton(text="Support", url=f"https://telegram.me/{supportc}")
         ]]
     )
 
 HELP_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton(text="Channel", url=f"https://telegram.me/{updatesc}"),
         InlineKeyboardButton(text="Support", url=f"https://telegram.me/{supportc}")
         ]]
     )
 
 ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton(text="Channel", url=f"https://telegram.me/{updatesc}"),
         InlineKeyboardButton(text="Support", url=f"https://telegram.me/{supportc}")
         ]]
     )
