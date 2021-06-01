@@ -1,3 +1,6 @@
+# Made with Python3
+# (C) FayasNoushad and Vivek-TP
+
 import os
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
@@ -28,7 +31,7 @@ HELP_TEXT = """
 ⭕️ Use /id in Group or Channel to get Unique Telegram ID
 """
 ABOUT_TEXT = """
-**Bot :** `URL Uploader`
+**Bot :** `Info Bot`
 **Creator :** [Vivek](https://telegram.me/Vivek_KERALA)
 **Credits :** `Everyone in this journey`
 **Source :** [Click here](https://github.com/vivek-tp/Info-Bot)
@@ -104,15 +107,21 @@ async def about(bot, update):
 
 @Bot.on_message(filters.private & filters.command("info"))
 async def info(bot, update):
-    text = f"""
-**First Name :** {update.from_user.first_name}
-**Second Name :** {update.from_user.second_name}
-**Username :** {update.from_user.username}
-**ID :** {update.from_user.id}
-"""
+    # Author: Fayas (https://github.com/FayasNoushad) (@FayasNoushad)
+    # (C) FayasNoushad # All rights reserved # Made with Python3
+    info = f"**{update.from_user.first_name}'s Informations**\n"
+    info += f"\n**First Name :** {update.from_user.first_name}"
+    if update.from_user.second_name:
+        info += f"\n**Second Name :** {update.from_user.second_name}"
+    if update.from_user.username:
+        info += f"\n**Username :** {update.from_user.username}"
+    info += f"\n**ID :** {update.from_user.id}"
+    info += f"\n**Status :** {update.from_user.status}"
+    info += f"\n**Data Center :** {update.from_user.dc_id}"
+    info += f"\n**Type :** {update.from_user._}"
     reply_markup = BOT_BUTTONS
     await update.reply_text(        
-        text=text,
+        text=info,
         disable_web_page_preview=True,
         reply_markup=reply_markup
     )
