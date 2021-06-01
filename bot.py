@@ -131,7 +131,3 @@ async def id(bot, update):
         disable_web_page_preview=True,
         reply_markup=reply_markup
     )
-
-
-
-Bot.run()
