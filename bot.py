@@ -1,5 +1,5 @@
 # Made with Python3
-# (C) FayasNoushad and Vivek-TP
+# (C) Vivek-TP and FayasNoushad
 
 import os
 from pyrogram import Client, filters
@@ -31,13 +31,13 @@ HELP_TEXT = """
 ⭕️ Use /id in Group or Channel to get Unique Telegram ID
 """
 ABOUT_TEXT = """
-**Bot :** `Info Bot`
-**Creator :** [Vivek](https://telegram.me/Vivek_KERALA)
-**Credits :** `Everyone in this journey`
-**Source :** [Click here](https://github.com/vivek-tp/Info-Bot)
-**Language :** [Python3](https://python.org)
-**Library :** [Pyrogram v1.2.0](https://pyrogram.org)
-**Server :** [Heroku](https://heroku.com)
+- **Bot :** `Info Bot`
+- **Creator :** [Vivek](https://telegram.me/Vivek_KERALA)
+- **Credits :** `Everyone in this journey`
+- **Source :** [Click here](https://github.com/vivek-tp/Info-Bot)
+- **Language :** [Python3](https://python.org)
+- **Library :** [Pyrogram v1.2.0](https://pyrogram.org)
+- **Server :** [Heroku](https://heroku.com)
 """
 
 Bot = Client(
@@ -119,7 +119,7 @@ async def info(bot, update):
     info += f"\n**Type :** {update.from_user._}"
     reply_markup = BOT_BUTTONS
     await update.reply_text(        
-        text=text,
+        text=info,
         disable_web_page_preview=True,
         reply_markup=reply_markup
     )
