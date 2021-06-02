@@ -107,16 +107,12 @@ async def about(bot, update):
 
 @Bot.on_message(filters.private & filters.command("info"))
 async def info(bot, update):
-    info = f"**{update.from_user.first_name}'s Informations**\n"
-    info += f"\n**First Name :** {update.from_user.first_name}"
-    if update.from_user.second_name:
-        info += f"\n**Second Name :** {update.from_user.second_name}"
-    if update.from_user.username:
-        info += f"\n**Username :** {update.from_user.username}"
-    info += f"\n**ID :** {update.from_user.id}"
-    info += f"\n**Status :** {update.from_user.status}"
-    info += f"\n**Data Center :** {update.from_user.dc_id}"
-    info += f"\n**Type :** {update.from_user._}"
+    text = f"""
+**Your First Name :** {update.from_user.first_name}
+**Your Second Name :** {update.from_user.second_name}
+**Your Username :** {update.from_user.username}
+**Your Profile Link :** {update.from_user.mention}
+""" 
     reply_markup = BOT_BUTTONS
     await update.reply_text(        
         text=info,
