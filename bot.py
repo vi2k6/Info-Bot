@@ -102,7 +102,7 @@ async def about(bot, update):
 async def info(bot, update):
     text = f"""
 **Your First Name :** {update.from_user.first_name}
-**Your Second Name :** {update.from_user.second_name}
+**Your Second Name :** {update.from_user.last_name}
 **Your Username :** {update.from_user.username}
 **Your Profile Link :** {update.from_user.mention}
 """ 
