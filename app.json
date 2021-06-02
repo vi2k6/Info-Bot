@@ -12,6 +12,9 @@
         "BOT_TOKEN": {
             "description": "Your Bot token from @Botfather"
         },
+        "SUPPORT_CHAT": {
+            "description": "Your CHAT Username Without @"
+        },
         "API_ID": {
             "description": "Your API_ID from https://my.telegram.org/apps"
         },
