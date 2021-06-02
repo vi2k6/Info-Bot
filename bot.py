@@ -115,7 +115,7 @@ async def info(bot, update):
 """ 
     reply_markup = BOT_BUTTONS
     await update.reply_text(        
-        text=info,
+        text=text,
         disable_web_page_preview=True,
         reply_markup=reply_markup
     )
