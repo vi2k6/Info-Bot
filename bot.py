@@ -40,13 +40,6 @@ ABOUT_TEXT = """
 - **Server :** [Heroku](https://heroku.com)
 """
 
-Bot = Client(
-        "Maintenance Bot",
-        bot_token = os.environ["BOT_TOKEN"],
-        api_id = int(os.environ["API_ID"]),
-        api_hash = os.environ["API_HASH"]
-)
-
 supportc = os.environ["SUPPORT_CHAT"]
 
 BOT_BUTTONS = InlineKeyboardMarkup(
