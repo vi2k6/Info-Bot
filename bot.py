@@ -40,30 +40,28 @@ ABOUT_TEXT = """
 - **Server :** [Heroku](https://heroku.com)
 """
 
-supportc = os.environ["SUPPORT_CHAT"]
-
 BOT_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton(text="Support", url=f"https://telegram.me/{supportc}")
+        InlineKeyboardButton(text="SOURCE", url=f"https://github.com/vivek-tp/Info-Bot")
         ]]
     )
 
 
 START_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton(text="Support", url=f"https://telegram.me/{supportc}")
+        InlineKeyboardButton(text="SOURCE", url=f"https://github.com/vivek-tp/Info-Bot")
         ]]
     )
 
 HELP_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton(text="Support", url=f"https://telegram.me/{supportc}")
+        InlineKeyboardButton(text="SOURCE", url=f"https://github.com/vivek-tp/Info-Bot")
         ]]
     )
 
 ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton(text="Support", url=f"https://telegram.me/{supportc}")
+        InlineKeyboardButton(text="SOURCE", url=f"https://github.com/vivek-tp/Info-Bot")
         ]]
     )
                 
@@ -101,10 +99,15 @@ async def about(bot, update):
 @Bot.on_message(filters.private & filters.command("info"))
 async def info(bot, update):
     text = f"""
-**Your First Name :** {update.from_user.first_name}
-**Your Second Name :** {update.from_user.last_name}
-**Your Username :** {update.from_user.username}
-**Your Profile Link :** {update.from_user.mention}
+**🙋🏻‍♂️ First Name :** {update.from_user.first_name}
+
+**🧖‍♂️ Your Second Name :** {update.from_user.last_name}
+
+**🧑🏻‍🎓 Your Username :** {update.from_user.username}
+
+**🆔 Your Telegram ID :** {update.from_user.id}
+
+**🔗 Your Profile Link :** {update.from_user.mention}
 """ 
     reply_markup = BOT_BUTTONS
     await update.reply_text(        
