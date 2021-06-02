@@ -98,10 +98,14 @@ async def about(bot, update):
 
 @Bot.on_message(filters.private & filters.command("info"))
 async def info(bot, update):
+    if update.from_user.last_name:
+        last_name = update.from_user.last_name
+    else:
+        last_name = "None"
     text = f"""
 **🙋🏻‍♂️ First Name :** {update.from_user.first_name}
 
-**🧖‍♂️ Your Second Name :** {update.from_user.last_name}
+**🧖‍♂️ Your Second Name :** {last_name}
 
 **🧑🏻‍🎓 Your Username :** {update.from_user.username}
 
