@@ -107,8 +107,6 @@ async def about(bot, update):
 
 @Bot.on_message(filters.private & filters.command("info"))
 async def info(bot, update):
-    # Author: Fayas (https://github.com/FayasNoushad) (@FayasNoushad)
-    # (C) FayasNoushad # All rights reserved # Made with Python3
     info = f"**{update.from_user.first_name}'s Informations**\n"
     info += f"\n**First Name :** {update.from_user.first_name}"
     if update.from_user.second_name:
@@ -121,7 +119,7 @@ async def info(bot, update):
     info += f"\n**Type :** {update.from_user._}"
     reply_markup = BOT_BUTTONS
     await update.reply_text(        
-        text=info,
+        text=text,
         disable_web_page_preview=True,
         reply_markup=reply_markup
     )
