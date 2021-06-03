@@ -2,11 +2,7 @@
 
 ##### A Bot To Get Info Of Telegram messages , Media , Channel id Group ID etc.
 
-```
-Made with Python3
-(C) @VIVEK-TP
-Copyright permission under MIT License
-```
+Get Info Of Your And Messages , Channels , Groups ETC...
 
 ### How to make your own
 
