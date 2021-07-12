@@ -1,5 +1,5 @@
 # Made with Python3
-# (C) Vivek-TP and FayasNoushad
+# (C) Haseeb Rb @Royalbotz
 
 import os
 from pyrogram import Client, filters
@@ -32,36 +32,36 @@ HELP_TEXT = """
 """
 ABOUT_TEXT = """
 - **Bot :** `Info Bot`
-- **Creator :** [Vivek](https://telegram.me/Vivek_KERALA)
+- **Creator :** [Haseeb](https://telegram.me/botzmaker)
 - **Credits :** `Everyone in this journey`
-- **Source :** [Click here](https://github.com/vivek-tp/Info-Bot)
+- **Source :** [Click here](t.me/Royalbotz/38)
 - **Language :** [Python3](https://python.org)
 - **Library :** [Pyrogram v1.2.0](https://pyrogram.org)
-- **Server :** [Heroku](https://heroku.com)
+- **Server :** [tGbots](Royalbotz/3)
 """
 
 BOT_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton(text="SOURCE", url=f"https://github.com/vivek-tp/Info-Bot")
+        InlineKeyboardButton(text="🔖 Update", url=f"t.me/Royalbotz")
         ]]
     )
 
 
 START_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton(text="SOURCE", url=f"https://github.com/vivek-tp/Info-Bot")
+        InlineKeyboardButton(text="🔖 Update", url=f"https://t.me/Royalbotz")
         ]]
     )
 
 HELP_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton(text="SOURCE", url=f"https://github.com/vivek-tp/Info-Bot")
+        InlineKeyboardButton(text="Support chat", url=f"https://t.me/tgbotschat")
         ]]
     )
 
 ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton(text="SOURCE", url=f"https://github.com/vivek-tp/Info-Bot")
+        InlineKeyboardButton(text="⚠️ My Channel", url=f"https://t.me/Royalbotz")
         ]]
     )
                 
