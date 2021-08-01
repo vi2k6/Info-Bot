@@ -20,15 +20,15 @@ I am a Simple Telegram Info Gathering Bot, Click /help to know my Commands and m
 HELP_TEXT = """
 🤔 How to use me?
 
-⭕️ Forward a Message for take it's Details (in Private)
+• Forward a Message for take it's Details (in Private)
 
-⭕️ Send any Media to take its Details (in private)
+• Send any Media to take its Details (in private)
 
-⭕️ Reply /info to a Message to take Message Details
+• Reply /info to a Message to take Message Details
 
-⭕️ Use /info Command to take your Details
+• Use /info Command to take your Details
 
-⭕️ Use /id in Group or Channel to get Unique Telegram ID
+• Use /id in Group or Channel to get Unique Telegram ID
 """
 ABOUT_TEXT = """
 - **Bot :** `Info Bot`
@@ -52,18 +52,6 @@ START_BUTTONS = InlineKeyboardMarkup(
         InlineKeyboardButton(text="SOURCE", url=f"https://github.com/vivek-tp/Info-Bot")
         ]]
     )
-
-HELP_BUTTONS = InlineKeyboardMarkup(
-        [[
-        InlineKeyboardButton(text="SOURCE", url=f"https://github.com/vivek-tp/Info-Bot")
-        ]]
-    )
-
-ABOUT_BUTTONS = InlineKeyboardMarkup(
-        [[
-        InlineKeyboardButton(text="SOURCE", url=f"https://github.com/vivek-tp/Info-Bot")
-        ]]
-    )
                 
 @Bot.on_message(filters.private & filters.command("start"))
 async def start(bot, update):
@@ -78,7 +66,7 @@ async def start(bot, update):
 @Bot.on_message(filters.private & filters.command("help"))
 async def help(bot, update):
     text = HELP_TEXT
-    reply_markup = HELP_BUTTONS
+    reply_markup = START_BUTTONS
     await update.reply_text(
         text=text,
         disable_web_page_preview=True,
@@ -89,7 +77,7 @@ async def help(bot, update):
 @Bot.on_message(filters.private & filters.command("about"))
 async def about(bot, update):
     text = ABOUT_TEXT
-    reply_markup = ABOUT_BUTTONS
+    reply_markup = START_BUTTONS
     await update.reply_text(
         text=text,
         disable_web_page_preview=True,
@@ -113,7 +101,7 @@ async def info(bot, update):
 
 **🔗 Your Profile Link :** {update.from_user.mention}
 """ 
-    reply_markup = BOT_BUTTONS
+    reply_markup = START_BUTTONS
     await update.reply_text(        
         text=text,
         disable_web_page_preview=True,
@@ -125,7 +113,7 @@ async def id(bot, update):
     text = f"""
 **Your Telegram ID :** {update.from_user.id}
 """
-    reply_markup = BOT_BUTTONS
+    reply_markup = START_BUTTONS
     await update.reply_text(        
         text=text,
         disable_web_page_preview=True,
