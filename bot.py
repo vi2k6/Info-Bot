@@ -120,4 +120,10 @@ async def id(bot, update):
         reply_markup=reply_markup
     )
 
+print(
+    """
+Bot Started!!! Now Join on @Vkprojects
+"""
+)
+
 Bot.run()
