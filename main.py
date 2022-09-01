@@ -151,4 +151,4 @@ async def id(bot, update):
     )
 
 
-Run.run()
+Bot.run()
