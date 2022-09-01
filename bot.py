@@ -151,5 +151,4 @@ async def id(bot, update):
     )
 
 
-print("Bot Started!!! Now Join on @MyOwnBots")
 Bot.run()
