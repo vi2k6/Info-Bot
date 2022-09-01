@@ -138,7 +138,7 @@ async def id(bot, update):
 @Bot.on_message(filters.group & filters.command("id"))
 async def id(bot, update):
     await update.reply_text(        
-        text="**Telegram ID :** {update.chat.id}
+        text="""**Telegram ID :** {update.chat.id}
 **DC :** {update.chat.dc_id}
 **Name :** {update.chat.title}
 **Type :** {update.chat.type}
@@ -146,7 +146,7 @@ async def id(bot, update):
 **Username :** {update.chat.username}
 **Is Scam? :** {update.chat.is_scam}
 **Description :** {update.chat.discription}
-**Restricted :** {update.chat.is_restricted}",
+**Restricted :** {update.chat.is_restricted}""",
         disable_web_page_preview=True
     )
 
