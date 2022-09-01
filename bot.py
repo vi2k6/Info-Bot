@@ -138,7 +138,7 @@ async def id(bot, update):
 @Bot.on_message(filters.group & filters.command("id"))
 async def id(bot, update):
     await update.reply_text(        
-        text=f"**Telegram ID :** {update.chat.id}
+        text="**Telegram ID :** {update.chat.id}
 **DC :** {update.chat.dc_id}
 **Name :** {update.chat.title}
 **Type :** {update.chat.type}
